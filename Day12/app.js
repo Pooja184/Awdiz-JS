@@ -31,7 +31,7 @@ const twoD_SpiralArr = () => {
       }
       bottom--;
     }
-    console.log(left <= right,"++")
+    console.log(left <= right, "++");
     if (left <= right) {
       for (let i = bottom; i >= top; i--) {
         console.log(arr[i][left]);
@@ -42,4 +42,38 @@ const twoD_SpiralArr = () => {
   }
   console.log(spiralArr.join(" "));
 };
-twoD_SpiralArr();
+// twoD_SpiralArr();
+
+const twoD_z_pattern = () => {
+  let arr = [
+    [1, 2, 3,10],
+    [4, 5, 6,11],
+    [7, 8, 9,12],
+    [13,14,15,16]
+  ];
+  let left = 0;
+  let right = arr[0].length - 1;
+  let top = 0;
+  let bottom = arr.length - 1;
+  let zArr=[];
+  for (let i = left; i <= right; i++) {
+    // console.log(arr[top][i]);
+    zArr.push(arr[top][i])
+  }
+ top++
+  for(let i=top;i<=bottom;i++){
+    right--
+    // console.log(right,"r")
+    // console.log(arr[i][right])
+    zArr.push(arr[i][right])
+    
+  }
+left++
+  for(let i=left;i<=bottom;i++){
+    // console.log(arr[bottom][i])
+    zArr.push(arr[bottom][i])
+
+  }
+  console.log(zArr)
+};
+twoD_z_pattern();
