@@ -194,4 +194,34 @@ const z_pattern=()=>{
 z_pattern();
 
 
+const rotateNintyDegrees = () => {
+  // Rotate Matrix by 90 Degrees
+  // Description: Rotate a square matrix by 90 degrees clockwise.
+  // Input:
+  //   [
+  // [1, 2],
+  // [3, 4]
+  // ]
+
+  let arr = [
+    [1, 2],
+    [3, 4],
+  ];
+
+  let n = arr.length - 1;
+  let newArr = [];
+
+  for (let i = n; i >= 0; i--) {
+    let temp = [];
+    for (let j = 0; j <= n; j++) {
+      temp.push(arr[j][i]);
+    }
+    newArr.push(temp);
+  }
+
+  console.log(newArr);
+};
+rotateNintyDegrees();
+
+
 
